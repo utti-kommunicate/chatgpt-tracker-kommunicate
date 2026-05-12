@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Customer Support AI Answers</title>
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <main class="shell">
+      <section class="toolbar" aria-labelledby="page-title">
+        <div>
+          <p class="eyebrow">OpenAI API research runner</p>
+          <h1 id="page-title">Customer support automation answers</h1>
+        </div>
+        <button id="run-button" type="button">
+          <span class="button-icon" aria-hidden="true">▶</span>
+          Run questions
+        </button>
+      </section>
+
+      <section class="panel">
+        <h2>Questions</h2>
+        <ol id="question-list" class="question-list"></ol>
+      </section>
+
+      <section class="status-row" aria-live="polite">
+        <span id="status-dot" class="status-dot"></span>
+        <span id="status-text">Ready</span>
+      </section>
+
+      <section id="results" class="results" aria-label="Answers and sources"></section>
+    </main>
+
+    <template id="result-template">
+      <article class="result-card">
+        <div class="result-grid">
+          <div>
+            <p class="label">Question</p>
+            <h2 class="question"></h2>
+          </div>
+          <div>
+            <p class="label">Answer</p>
+            <p class="answer"></p>
+          </div>
+          <div>
+            <p class="label">Sources</p>
+            <ul class="sources"></ul>
+          </div>
+        </div>
+      </article>
+    </template>
+
+    <script src="/app.js" type="module"></script>
+  </body>
+</html>
